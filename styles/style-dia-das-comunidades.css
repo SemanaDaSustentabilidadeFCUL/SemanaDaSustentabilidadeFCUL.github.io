@@ -47,7 +47,7 @@ input[type = "radio"]{
 }
 
 .tema-dia{
-    width: 50%;
+    width: 10%;
     height:auto;
     display: flex;
     align-items: center;
