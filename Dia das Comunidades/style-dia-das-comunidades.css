@@ -1,0 +1,42 @@
+body{
+    background-color: #f4a261;
+    font-family: 'poppins', sans-serif;
+    color: #143957
+
+}
+.title-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'glacial-indifference',sans-serif;
+}
+
+extra-not-applied{ 
+  -webkit-text-stroke: 0.15px white;
+    text-shadow: 
+        2px 2px 5px rgb(255, 255, 255);
+}
+
+button{
+    font-family: 'poppins', sans-serif;
+}
+.title-image{
+    width: 20%;
+    height: auto;
+}
+@font-face {
+    font-family: "glacial-indifference";
+    src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf") format("truetype");
+
+    font-family: "poppins";
+    src: url("fonts/poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+.question{
+    margin: 1px;
+}
+
+input[type = "radio"]{
+
+}
+
