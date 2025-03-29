@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Diário SDS'25</title>
+    <link rel = "icon" href="images/logo squared.png" type="image/png">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +20,11 @@
     </style>
 </head>
 <body>
-    <h1>Dia das Comunidades - SDS'25</h1>
+    <link rel = "stylesheet" href="styles/styles.css">
+    <div class = "title-container">
+        <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
+        <h1>Dia das Comunidades - SDS'25</h1>
+    </div>
 
     <!-- Page 1: Email Input -->
     <div id="page-email">
@@ -35,6 +41,7 @@
             <input type="radio" name="q1" value="Sentinelas da água"> Sentinelas da água<br>
             <input type="radio" name="q1" value="Guardiãs do mar"> Guardiãs do mar<br>
             <input type="radio" name="q1" value="Oceano azul"> Oceano azul<br>
+            <br>
         </div>
         <div class="question">
             <p>2. Em que data foi criado o projeto Repair Café? </p>
@@ -42,7 +49,7 @@
             <input type="radio" name="q2" value="18 junho"> 18 de junho de 2016<br>
             <input type="radio" name="q2" value="10 abril"> 10 de abril de 2015<br>
             <input type="radio" name="q2" value="20 janeiro"> 20 de janeiro de 2018<br>
-
+            <br>
         </div>
         <div class="question">
             <p>3. Qual é o objetivo da campanha Seabin?</p>
@@ -50,6 +57,7 @@
             <input type="radio" name="q3" value="Recolher"> Recolher o lixo marinho dos portos e marinas.<br>
             <input type="radio" name="q3" value="Beatas"> Campanhas de incentivo à recolha de beatas nas praias.<br>
             <input type="radio" name="q3" value="Medir"> Medir o nível de poluição das águas.<br>
+            <br>
         </div>
         <div class="question">
             <p>4. Em que se baseia a iniciativa VeganBottle?</p>
@@ -57,6 +65,7 @@
             <input type="radio" name="q4" value="Recolhas"> Campanhas de recolha de garrafas de água, para a sua reutilização.<br>
             <input type="radio" name="q4" value="Workshops"> Promover workshops de como reutilizar garrafas de plástico descartáveis.<br>
             <input type="radio" name="q4" value="Sensibilização"> Campanhas de sensibilização para a natureza poluente do plástico.<br>
+            <br>
         </div>
         <div class="question">
             <p>5. Qual a invenção desenvolvida pelo projeto Zéphyr Solar?</p>
@@ -64,7 +73,7 @@
             <input type="radio" name="q5" value="Balões"> Balões solares, com a função de captação de energia solar.<br>
             <input type="radio" name="q5" value="Aquecedores"> Aquecedores que funcionam com luz solar.<br>
             <input type="radio" name="q5" value="Geradores"> Geradores de energia sustentáveis.<br>
-
+            <br>
         </div>
         <button onclick="submitQuiz()">Enviar</button>
     </div>
