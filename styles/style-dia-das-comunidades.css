@@ -52,9 +52,12 @@ input[type = "radio"]{
 }
 
 .tema-dia{
-    align-self: center;
+    position: fixed; /* Keeps the container fixed at the bottom of the viewport */
+    bottom: 0;
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%);
     width: 100%;
-    height:auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
