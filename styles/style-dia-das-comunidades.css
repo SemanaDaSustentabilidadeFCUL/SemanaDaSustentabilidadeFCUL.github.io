@@ -1,5 +1,7 @@
 html, body {
     width: 100%; /* Ensures the entire page width is available */
+    margin: 0;
+    padding: 0;
 }
 
 
