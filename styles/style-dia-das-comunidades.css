@@ -54,9 +54,14 @@ input[type = "radio"]{
 }
 
 .tema-dia{
-    width: 100%;
-    height:auto;
+    position: fixed; /* Keeps the container fixed at the bottom of the viewport */
+    bottom: 0;
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%);
+    width: 80%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f49343;
 }
