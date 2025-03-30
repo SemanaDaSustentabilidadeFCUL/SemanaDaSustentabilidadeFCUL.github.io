@@ -4,12 +4,8 @@ head{
 body{
     background-color: #f4a261;
     font-family: 'poppins', sans-serif;
-    color: #143957;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    margin: 0;
+    color: #143957
+
 }
 .title-container{
     width: 100%;
@@ -58,7 +54,7 @@ input[type = "radio"]{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-}
+    }
  non-attr{   
     display: flex;
     align-items: center;
