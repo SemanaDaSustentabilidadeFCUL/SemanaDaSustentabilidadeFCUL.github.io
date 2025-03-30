@@ -12,8 +12,9 @@ body{
     background-color: #f4a261;
     font-family: 'poppins', sans-serif;
     color: #143957
-
+    color-scheme: light;
 }
+
 .title-container{
     background-color: #f49343;
     display: flex;
