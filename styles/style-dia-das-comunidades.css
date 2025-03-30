@@ -1,3 +1,16 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f4a261; /* Light mode background */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #f4a261; /* Dark mode background */
+    }
+}
+
+
 html, body {
     width: 100%; /* Ensures the entire page width is available */
     margin: 0;
