@@ -1,12 +1,12 @@
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #f4a261 !important; /* Light mode background */
+        background-color: #87d883 !important; /* Light mode background */
     }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #f4a261 !important; /* Dark mode background */
+        background-color: #87d883 !important; /* Dark mode background */
     }
 }
 
@@ -19,19 +19,19 @@ html, body {
 
 
 head{
-    background-color: #f49343 !important;
-    background: #f49343 !important;
+    background-color: #60d25a !important;
+    background: #60d25a !important;
 }
 body{
-    background-color: #f4a261 !important;
+    background-color: #87d883 !important;
     font-family: 'poppins', sans-serif;
     color: #143957;
     color-scheme: light;
-    background: #f4a261 !important;
+    background: #87d883 !important;
 }
 
 .title-container{
-    background-color: #f49343 !important;
+    background-color: #60d25a !important;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -93,6 +93,6 @@ tema-em-fixed-nonattr{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f49343 !important;
-    background: #f49343 !important
+    background-color: #60d25a !important;
+    background: #60d25a !important
 }

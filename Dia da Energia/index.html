@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Quiz Diário SDS'25</title>
+    <link rel = "icon" href="styles/images/logo squared.png" type="image/png">
+    
+    <style>
+        .title-container{
+            background-color: #60d25a;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <link rel = "stylesheet" href="styles/style-dia-da-energia.css">
+    <div class = "title-container">
+        <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
+        <h1>Dia da Energia - SDS'25</h1>
+    </div>
+
+    <!-- Page 1: Email Input -->
+    <div id="page-email">
+        <p>Por favor, insira o seu email:</p>
+        <input type="email" id="email" placeholder="Insira o seu email" required>
+        <button onclick="goToQuiz()">Avançar</button>
+        <br>
+        <img class = "tema-dia " src = "styles/images/Dia 2.png" >
+    </div>
+
+    <!-- Page 2: Quiz -->
+    <div id="page-quiz" class="hidden">
+        <div class="question">
+            <p>1. Qual das seguintes medidas é considerada a mais eficaz para melhorar a eficiência energética em prédios?</p>
+            <input type="radio" name="q1" value="Lâmpadas incandescentes"> Adoção de lâmpadas incandescentes<br>
+            <input type="radio" name="q1" value="Isolamento térmico"> Melhoria do isolamento térmico das construções<br>
+            <input type="radio" name="q1" value="Janelas sem tratamento"> Aumento do número de janelas sem tratamento térmico<br>
+            <input type="radio" name="q1" value="Redução do uso de sistemas"> Redução do uso de sistemas de climatização<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>2. No contexto da sustentabilidade energética, o conceito de “energia limpa” busca, primordialmente: </p>
+            <input type="radio" name="q2" value="Reduzir custos"> Reduzir os custos da eletricidade para o consumidor<br>
+            <input type="radio" name="q2" value="Diminuir dependência"> Diminuir a dependência de fontes fósseis<br>
+            <input type="radio" name="q2" value="Minimizar emissão"> Minimizar a emissão de poluentes e gases de efeito estufa<br>
+            <input type="radio" name="q2" value="Aumentar capacidade"> Aumentar a capacidade de geração a qualquer custo<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>3. Qual dos seguintes fatores pode limitar a expansão da energia eólica em áreas costeiras?</p>
+            <input type="radio" name="q3" value="Disponibilidade de ventos"> A disponibilidade de ventos constantes e fortes<br>
+            <input type="radio" name="q3" value="Impacto visual e sonoro"> O impacto visual e sonoro das turbinas eólicas em comunidades locais<br>
+            <input type="radio" name="q3" value="Baixa eficiência"> A baixa eficiência na conversão de energia eólica em eletricidade<br>
+            <input type="radio" name="q3" value="Falta de tecnologia"> A falta de tecnologia para integrar a energia eólica nas redes elétricas existentes<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>4. Qual dos seguintes desafios está associado à utilização de energia geotérmica em áreas urbanas densamente povoadas?</p>
+            <input type="radio" name="q4" value="Baixa disponibilidade"> A baixa disponibilidade de recursos geotérmicos em áreas urbanas<br>
+            <input type="radio" name="q4" value="Emissão de gases"> A emissão de gases de efeito estufa durante a operação de centrais geotérmicas<br>
+            <input type="radio" name="q4" value="Falta de tecnologia para adaptar"> A falta de tecnologia para adaptar a energia geotérmica às necessidades de aquecimento e resfriamento de edifícios<br>
+            <input type="radio" name="q4" value="Alto custo"> O alto custo de perfuração e instalação de sistemas geotérmicos<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>5. Qual a principal diferença entre biocombustíveis de primeira geração e biocombustíveis de segunda geração?</p>
+            <input type="radio" name="q5" value="A"> Biocombustíveis de primeira geração são produzidos a partir de resíduos agrícolas, enquanto biocombustíveis de segunda geração são produzidos a partir de culturas alimentares<br>
+            <input type="radio" name="q5" value="B"> Biocombustíveis de primeira geração são mais eficientes na redução de emissões de gases de efeito estufa do que biocombustíveis de segunda geração<br>
+            <input type="radio" name="q5" value="C"> Biocombustíveis de primeira geração competem com a produção de alimentos, enquanto biocombustíveis de segunda geração utilizam matérias-primas não alimentares<br>
+            <input type="radio" name="q5" value="D"> Biocombustíveis de primeira geração são produzidos a partir de biomassa celulósica, enquanto biocombustíveis de segunda geração são produzidos a partir de óleos vegetais<br>
+            <br>
+        </div>
+        <button onclick="submitQuiz()">Enviar</button>
+    </div>
+
+    <!-- Page 3: Results -->
+    <div id="page-results" class="hidden">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "Isolamento térmico",
+            q2: "Minimizar emissão",
+            q3: "Impacto visual e sonoro",
+            q4: "Alto custo",
+            q5: "C"
+        };
+
+        let startTime;
+
+        // Go to Quiz page
+        function goToQuiz() {
+            const emailInput = document.getElementById("email").value;
+            const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+            if (!emailPattern.test(emailInput)) {
+                alert("Por favor, insira um email válido.");
+                return;
+            }
+
+            // Store email for later use
+            localStorage.setItem("quizEmail", emailInput);
+
+            // Show quiz page
+            document.getElementById("page-email").classList.add("hidden");
+            document.getElementById("page-quiz").classList.remove("hidden");
+
+            startTime = new Date();
+        }
+
+        // Submit Quiz
+        function submitQuiz() {
+            const endTime = new Date();
+            const timeTaken = Math.round((endTime - startTime) / 1000); // Time in seconds
+            const email = localStorage.getItem("quizEmail");
+
+            let score = 0;
+            for (const [question, answer] of Object.entries(correctAnswers)) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answer) {
+                    score++;
+                }
+            }
+
+            // Display results
+            document.getElementById("page-quiz").classList.add("hidden");
+            document.getElementById("page-results").classList.remove("hidden");
+            document.getElementById("result").innerHTML = `
+                <p><b>Obrigado pela sua resposta! Volte amanhã para um novo quiz!</b></p>
+                <p><b>Email:</b> ${email}</p>
+                <p><b>Pontuação:</b> ${score} / ${Object.keys(correctAnswers).length}</p>
+                <p><b>Tempo:</b> ${timeTaken} segundos</p> 
+            `;
+
+            // Send data to the backend
+            const quizData = { email, score, time: timeTaken };
+            fetch("https://backendquizsds.onrender.com/save-quiz", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(quizData),
+            }).then(response => {
+                if (response.ok) {
+                    alert("Respostas enviadas e armazenadas com sucesso!");
+                } else {
+                    alert("Ocorreu um problema ao armazenar as respostas.");
+                }
+            }).catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao conectar com o servidor.");
+            });
+        }
+
+        // Reset Quiz
+        function resetQuiz() {
+            document.getElementById("page-results").classList.add("hidden");
+            document.getElementById("page-email").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
