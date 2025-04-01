@@ -31,8 +31,11 @@
     </div>
 
     <!-- Page 1: Email Input -->
-    <div id="page-email">
-        <p>Por favor, insira o seu email:</p>
+    <div id="page-email">~
+        <p style="font-size: 20px;">Por favor insira o seu nome e email</p>
+        <p>Primeiro e último nome:</p>
+        <input type="text" id="username" placeholder="Insira o seu nome" required>
+        <p>Email:</p>
         <input type="email" id="email" placeholder="Insira o seu email" required>
         <button onclick="goToQuiz()">Avançar</button>
         <br>
@@ -110,6 +113,8 @@
                 return;
             }
 
+            localStorage.setItem("username", document.getElementById("username").value);
+
             // Store email for later use
             localStorage.setItem("quizEmail", emailInput);
 
@@ -125,6 +130,7 @@
             const endTime = new Date();
             const timeTaken = Math.round((endTime - startTime) / 1000); // Time in seconds
             const email = localStorage.getItem("quizEmail");
+            const username = localStorage.getItem("username");
 
             let score = 0;
             for (const [question, answer] of Object.entries(correctAnswers)) {
@@ -139,13 +145,14 @@
             document.getElementById("page-results").classList.remove("hidden");
             document.getElementById("result").innerHTML = `
                 <p><b>Obrigado pela sua resposta! Volte amanhã para um novo quiz!</b></p>
+                <p><b>Nome:</b> ${username}</p>
                 <p><b>Email:</b> ${email}</p>
                 <p><b>Pontuação:</b> ${score} / ${Object.keys(correctAnswers).length}</p>
                 <p><b>Tempo:</b> ${timeTaken} segundos</p> 
             `;
 
             // Send data to the backend
-            const quizData = { email, score, time: timeTaken };
+            const quizData = { username, email, score, time: timeTaken };
             fetch("https://backendquizsds.onrender.com/save-quiz", {
                 method: "POST",
                 headers: {
