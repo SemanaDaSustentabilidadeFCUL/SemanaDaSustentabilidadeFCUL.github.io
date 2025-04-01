@@ -88,7 +88,7 @@ input[type = "radio"]{
     bottom: 0;
     left: 50%; /* Centers horizontally */
     transform: translateX(-50%);
-    width: 100%;
+    width: 80%;
     height: auto;
     display: flex;
     align-items: center;
