@@ -75,7 +75,7 @@ input[type = "radio"]{
     bottom: 0; /* Pushes the container to the bottom of the page */
     left: 50%; /* Centers the container horizontally */
     transform: translateX(-50%); /* Centers precisely */
-    width: 100%; /* Optional: Adjust width */
+    width: 80%; /* Optional: Adjust width */
     height: auto;
     display: flex; /* Keep flexbox properties for alignment inside */
     align-items: center;
