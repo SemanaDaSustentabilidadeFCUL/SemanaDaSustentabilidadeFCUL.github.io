@@ -1,0 +1,98 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #6FD2DF !important; /* Light mode background */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #6FD2DF !important; /* Dark mode background */
+    }
+}
+
+
+html, body {
+    width: 100%; /* Ensures the entire page width is available */
+    margin: 0;
+    padding: 0;
+}
+
+
+head{
+    background-color: #3ecbde !important;
+    background: #3ecbde !important;
+}
+body{
+    background-color: #6FD2DF !important;
+    font-family: 'poppins', sans-serif;
+    color: #143957;
+    color-scheme: light;
+    background: #6FD2DF !important;
+}
+
+.title-container{
+    background-color: #3ecbde !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'glacial-indifference',sans-serif;
+    background: #3ecbde !important;
+    
+
+}
+
+extra-not-applied{ 
+  -webkit-text-stroke: 0.15px white;
+    text-shadow: 
+        2px 2px 5px rgb(255, 255, 255);
+}
+
+button{
+    font-family: 'poppins', sans-serif;
+}
+.title-image{
+    width: 20%;
+    height: auto;
+}
+@font-face {
+    font-family: "glacial-indifference";
+    src: url("fonts/glacial-indifference/GlacialIndifference-Regular.otf") format("truetype");
+
+    font-family: "poppins";
+    src: url("fonts/poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+.question{
+    margin: 1px;
+}
+
+input[type = "radio"]{
+
+}
+
+tema-dia-absolute-nonattr{
+    position: absolute; /* Allows positioning relative to the containing block */
+    bottom: 0; /* Pushes the container to the bottom of the page */
+    left: 50%; /* Centers the container horizontally */
+    transform: translateX(-50%); /* Centers precisely */
+    width: 100%; /* Optional: Adjust width */
+    height: auto;
+    display: flex; /* Keep flexbox properties for alignment inside */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tema-dia{
+    position: fixed; /* Keeps the container fixed at the bottom of the viewport */
+    bottom: 0;
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%);
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3ecbde !important;
+    background: #3ecbde !important
+}

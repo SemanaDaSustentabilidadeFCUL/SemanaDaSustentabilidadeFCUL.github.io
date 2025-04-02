@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Quiz Diário SDS'25</title>
+    <link rel = "icon" href="styles/images/logo squared.png" type="image/png">
+    
+    <style>
+        .title-container{
+            background-color: #3ecbde;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <link rel = "stylesheet" href="styles/style-dia-dos-recursos-hidricos.css">
+    <div class = "title-container">
+        <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
+        <h1>Dia dos Recursos Hídricos - SDS'25</h1>
+    </div>
+
+    <!-- Page 1: Email Input -->
+    <div id="page-email">
+        <p style="font-size: 20px;">Por favor insira o seu nome e email</p>
+        <p>Primeiro e último nome:</p>
+        <input type="text" id="username" placeholder="Insira o seu nome" required>
+        <br>
+        <p>Email:</p>
+        <input type="email" id="email" placeholder="Insira o seu email" required>
+        <br>
+        <button onclick="goToQuiz()">Avançar</button>
+        <br>
+        <img class = "tema-dia " src = "styles/images/Dia 3.png" >
+    </div>
+
+    <!-- Page 2: Quiz -->
+    <div id="page-quiz" class="hidden">
+        <div class="question">
+            <p>1. Qual das seguintes práticas consome mais água?</p>
+            <input type="radio" name="q1" value="Café"> Produção de café<br>
+            <input type="radio" name="q1" value="Telemóveis"> Produção de telemóveis<br>
+            <input type="radio" name="q1" value="Chocolate"> Produção de chocolate<br>
+            <input type="radio" name="q1" value="algodão"> Produção de algodão<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>2. Em Portugal, qual a percentagem de bivalves de água doce que se encontra atualmente ameaçada?</p>
+            <input type="radio" name="q2" value="60%"> 60%<br>
+            <input type="radio" name="q2" value="70%"> 70%<br>
+            <input type="radio" name="q2" value="80%"> 80%<br>
+            <input type="radio" name="q2" value="90%"> 90%<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>3. Comparativamente às plantas terrestres, as ervas marinhas:</p>
+            <input type="radio" name="q3" value="Menos"> Não são eficientes na captura de carbono<br>
+            <input type="radio" name="q3" value="Igual"> São capazes de capturar tanto carbono quanto as plantas terrestres<br>
+            <input type="radio" name="q3" value="20x mais"> Capturam 20x mais carbono que as plantas terrestres<br>
+            <input type="radio" name="q3" value="35x mais"> Capturam 35x mais carbono que as plantas terrestres<br>
+            <br>
+        </div>
+        <div class="question">
+            <p>4. Qual das seguintes atividades mais consome água?</p>
+            <input type="radio" name="q4" value="Uso doméstico"> Uso doméstico<br>
+            <input type="radio" name="q4" value="Uso agrícola"> Uso agrícola<br>
+            <input type="radio" name="q4" value="Uso industrial"> Uso industrial<br>
+        </div>
+        <div class="question">
+            <p>5. Qual dos seguintes corpos de água sofreu um declínio catastrófico devido a práticas insustentáveis de irrigação?</p>
+            <input type="radio" name="q5" value="Lago Baikal"> Lago Baikal<br>
+            <input type="radio" name="q5" value="Mar Morto"> Mar Morto<br>
+            <input type="radio" name="q5" value="Mar de Aral"> Mar de Aral<br>
+            <input type="radio" name="q5" value="Delta do Rio Mekong"> Delta do Rio Mekong<br>
+            <br>
+        </div>
+        <button onclick="submitQuiz()">Enviar</button>
+    </div>
+
+    <!-- Page 3: Results -->
+    <div id="page-results" class="hidden">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "Café",
+            q2: "80%",
+            q3: "35x mais",
+            q4: "Uso agrícola",
+            q5: "Mar de Aral"
+        };
+
+        let startTime;
+
+        // Go to Quiz page
+        function goToQuiz() {
+            const emailInput = document.getElementById("email").value;
+            const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+            if (!emailPattern.test(emailInput)) {
+                alert("Por favor, insira um email válido.");
+                return;
+            }
+
+            localStorage.setItem("username", document.getElementById("username").value);
+
+            // Store email for later use
+            localStorage.setItem("quizEmail", emailInput);
+
+            // Show quiz page
+            document.getElementById("page-email").classList.add("hidden");
+            document.getElementById("page-quiz").classList.remove("hidden");
+
+            startTime = new Date();
+        }
+
+        // Submit Quiz
+        function submitQuiz() {
+            const endTime = new Date();
+            const timeTaken = Math.round((endTime - startTime) / 1000); // Time in seconds
+            const email = localStorage.getItem("quizEmail");
+            const username = localStorage.getItem("username");
+
+            let score = 0;
+            for (const [question, answer] of Object.entries(correctAnswers)) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answer) {
+                    score++;
+                }
+            }
+
+            // Display results
+            document.getElementById("page-quiz").classList.add("hidden");
+            document.getElementById("page-results").classList.remove("hidden");
+            document.getElementById("result").innerHTML = `
+                <p><b>Obrigado pela sua resposta! Volte amanhã para um novo quiz!</b></p>
+                <p><b>Nome:</b> ${username}</p>
+                <p><b>Email:</b> ${email}</p>
+                <p><b>Pontuação:</b> ${score} / ${Object.keys(correctAnswers).length}</p>
+                <p><b>Tempo:</b> ${timeTaken} segundos</p> 
+            `;
+
+            // Send data to the backend
+            const quizData = { username, email, score, time: timeTaken };
+            fetch("https://backendquizsds.onrender.com/save-quiz", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(quizData),
+            }).then(response => {
+                if (response.ok) {
+                    alert("Respostas enviadas e armazenadas com sucesso!");
+                } else {
+                    alert("Ocorreu um problema ao armazenar as respostas.");
+                }
+            }).catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao conectar com o servidor.");
+            });
+        }
+
+        // Reset Quiz
+        function resetQuiz() {
+            document.getElementById("page-results").classList.add("hidden");
+            document.getElementById("page-email").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

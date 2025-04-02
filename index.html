@@ -9,7 +9,7 @@
     
     <style>
         .title-container{
-            background-color: #3ecbde;
+            background-color: #fdd544;
         }
         body {
             font-family: Arial, sans-serif;
@@ -24,10 +24,10 @@
     </style>
 </head>
 <body>
-    <link rel = "stylesheet" href="styles/style-dia-dos-recursos-hidricos.css">
+    <link rel = "stylesheet" href="styles/style-dia-da-economia.css">
     <div class = "title-container">
         <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
-        <h1>Dia dos Recursos Hídricos - SDS'25</h1>
+        <h1>Dia da Economia - SDS'25</h1>
     </div>
 
     <!-- Page 1: Email Input -->
@@ -41,47 +41,48 @@
         <br>
         <button onclick="goToQuiz()">Avançar</button>
         <br>
-        <img class = "tema-dia " src = "styles/images/Dia 3.png" >
+        <img class = "tema-dia " src = "styles/images/Dia 4.png" >
     </div>
 
     <!-- Page 2: Quiz -->
     <div id="page-quiz" class="hidden">
         <div class="question">
-            <p>1. Qual das seguintes práticas consome mais água?</p>
-            <input type="radio" name="q1" value="Café"> Produção de café<br>
-            <input type="radio" name="q1" value="Telemóveis"> Produção de telemóveis<br>
-            <input type="radio" name="q1" value="Chocolate"> Produção de chocolate<br>
-            <input type="radio" name="q1" value="algodão"> Produção de algodão<br>
+            <p>1. De acordo com o EPI (Índice de Desempenho Ambiental) qual o país mais sustentável?</p>
+            <input type="radio" name="q1" value="Finlândia"> Finlândia<br>
+            <input type="radio" name="q1" value="Dinamarca"> Dinamarca<br>
+            <input type="radio" name="q1" value="Suécia"> Suécia<br>
+            <input type="radio" name="q1" value="Luxemburgo"> Luxemburgo<br>
             <br>
         </div>
         <div class="question">
-            <p>2. Em Portugal, qual a percentagem de bivalves de água doce que se encontra atualmente ameaçada?</p>
-            <input type="radio" name="q2" value="60%"> 60%<br>
-            <input type="radio" name="q2" value="70%"> 70%<br>
-            <input type="radio" name="q2" value="80%"> 80%<br>
-            <input type="radio" name="q2" value="90%"> 90%<br>
+            <p>2. O que significa ESG?</p>
+            <input type="radio" name="q2" value="Práticas"> Um conjunto de práticas que empresas adotam para reduzir custos operacionais<br>
+            <input type="radio" name="q2" value="Critério"> Um critério de avaliação (ambiental, social e governamental) que influencia decisões de investidores, podendo impactar o valor de mercado e o acesso a financiamento sustentável.<br>
+            <input type="radio" name="q2" value="Regras"> Um conjunto de regras obrigatórias impostas pelo governo para empresas reduzirem emissões de carbono.<br>
+            <input type="radio" name="q2" value="Certificação"> Uma certificação internacional que garante que uma empresa é 100% sustentável.<br>
             <br>
         </div>
         <div class="question">
-            <p>3. Comparativamente às plantas terrestres, as ervas marinhas:</p>
-            <input type="radio" name="q3" value="Menos"> Não são eficientes na captura de carbono<br>
-            <input type="radio" name="q3" value="Igual"> São capazes de capturar tanto carbono quanto as plantas terrestres<br>
-            <input type="radio" name="q3" value="20x mais"> Capturam 20x mais carbono que as plantas terrestres<br>
-            <input type="radio" name="q3" value="35x mais"> Capturam 35x mais carbono que as plantas terrestres<br>
+            <p>3. Em que ano é que a UE quer alcançar uma economia circular?</p>
+            <input type="radio" name="q3" value="2030"> 2030<br>
+            <input type="radio" name="q3" value="2027"> 2027<br>
+            <input type="radio" name="q3" value="2045"> 2045<br>
+            <input type="radio" name="q3" value="2050"> 2050<br>
             <br>
         </div>
         <div class="question">
-            <p>4. Qual das seguintes atividades mais consome água?</p>
-            <input type="radio" name="q4" value="Uso doméstico"> Uso doméstico<br>
-            <input type="radio" name="q4" value="Uso agrícola"> Uso agrícola<br>
-            <input type="radio" name="q4" value="Uso industrial"> Uso industrial<br>
+            <p>4. O que significa a sigla SDG da ONU</p>
+            <input type="radio" name="q4" value="Sustainable Development Goals"> Sustainable Development Goals<br>
+            <input type="radio" name="q4" value="Sustainable Development Guidelines"> Sustainable Development Guideline<br>
+            <input type="radio" name="q4" value="Strategic Development Guidelines"> Strategic Development Guidelines<br>
+            <input type="radio" name="q4" value="Social Democratic Governance"> Social Democratic Governance<br>
         </div>
         <div class="question">
-            <p>5. Qual dos seguintes corpos de água sofreu um declínio catastrófico devido a práticas insustentáveis de irrigação?</p>
-            <input type="radio" name="q5" value="Lago Baikal"> Lago Baikal<br>
-            <input type="radio" name="q5" value="Mar Morto"> Mar Morto<br>
-            <input type="radio" name="q5" value="Mar de Aral"> Mar de Aral<br>
-            <input type="radio" name="q5" value="Delta do Rio Mekong"> Delta do Rio Mekong<br>
+            <p>5. Qual a taxa de circularidade (percentagem de recursos materiais provenientes de resíduos reciclados) de Portugal?</p>
+            <input type="radio" name="q5" value="5,0%"> 5,0%<br>
+            <input type="radio" name="q5" value="3,4%"> 3,4%<br>
+            <input type="radio" name="q5" value="6,5%"> 6,5%<br>
+            <input type="radio" name="q5" value="2,6%"> 2,6%<br>
             <br>
         </div>
         <button onclick="submitQuiz()">Enviar</button>
@@ -94,11 +95,11 @@
 
     <script>
         const correctAnswers = {
-            q1: "Café",
-            q2: "80%",
-            q3: "35x mais",
-            q4: "Uso agrícola",
-            q5: "Mar de Aral"
+            q1: "Dinamarca",
+            q2: "Critério",
+            q3: "2050",
+            q4: "Sustainable Development Goals",
+            q5: "2,6%"
         };
 
         let startTime;
