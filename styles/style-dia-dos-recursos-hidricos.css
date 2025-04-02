@@ -1,12 +1,12 @@
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #9aebe8 !important; /* Light mode background */
+        background-color: #6FD2DF !important; /* Light mode background */
     }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #9aebe8 !important; /* Dark mode background */
+        background-color: #6FD2DF !important; /* Dark mode background */
     }
 }
 
@@ -19,24 +19,24 @@ html, body {
 
 
 head{
-    background-color: #68e4e0 !important;
-    background: #68e4e0 !important;
+    background-color: #3ecbde !important;
+    background: #3ecbde !important;
 }
 body{
-    background-color: #9aebe8 !important;
+    background-color: #6FD2DF !important;
     font-family: 'poppins', sans-serif;
     color: #143957;
     color-scheme: light;
-    background: #9aebe8 !important;
+    background: #6FD2DF !important;
 }
 
 .title-container{
-    background-color: #68e4e0 !important;
+    background-color: #3ecbde !important;
     display: flex;
     align-items: center;
     gap: 10px;
     font-family: 'glacial-indifference',sans-serif;
-    background: #68e4e0 !important;
+    background: #3ecbde !important;
     
 
 }
@@ -93,6 +93,6 @@ tema-dia-absolute-nonattr{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #68e4e0 !important;
-    background: #68e4e0 !important
+    background-color: #3ecbde !important;
+    background: #3ecbde !important
 }
