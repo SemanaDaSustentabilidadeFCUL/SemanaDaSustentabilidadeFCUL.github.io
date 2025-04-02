@@ -70,7 +70,7 @@ input[type = "radio"]{
 
 }
 
-.tema-dia{
+tema-dia-absolute-nonattr{
     position: absolute; /* Allows positioning relative to the containing block */
     bottom: 0; /* Pushes the container to the bottom of the page */
     left: 50%; /* Centers the container horizontally */
@@ -83,12 +83,12 @@ input[type = "radio"]{
 
 }
 
-tema-em-fixed-nonattr{
+.tema-dia{
     position: fixed; /* Keeps the container fixed at the bottom of the viewport */
     bottom: 0;
     left: 50%; /* Centers horizontally */
     transform: translateX(-50%);
-    width: 100%;
+    width: 60%;
     height: auto;
     display: flex;
     align-items: center;
