@@ -70,12 +70,12 @@ input[type = "radio"]{
 
 }
 
-.tema-dia{
+.tema-dia-absolute-non-attr{
     position: absolute; /* Allows positioning relative to the containing block */
     bottom: 0; /* Pushes the container to the bottom of the page */
     left: 50%; /* Centers the container horizontally */
     transform: translateX(-50%); /* Centers precisely */
-    width: 100%; /* Optional: Adjust width */
+    width: 80%; /* Optional: Adjust width */
     height: auto;
     display: flex; /* Keep flexbox properties for alignment inside */
     align-items: center;
@@ -83,16 +83,16 @@ input[type = "radio"]{
 
 }
 
-tema-em-fixed-nonattr{
+.tema-dia{
     position: fixed; /* Keeps the container fixed at the bottom of the viewport */
     bottom: 0;
     left: 50%; /* Centers horizontally */
     transform: translateX(-50%);
-    width: 100%;
+    width: 60%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #60d25a !important;
-    background: #60d25a !important
+    background: #60d25a !important;
 }
