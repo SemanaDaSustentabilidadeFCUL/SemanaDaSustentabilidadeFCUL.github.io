@@ -9,7 +9,7 @@
     
     <style>
         .title-container{
-            background-color: #60d25a;
+            background-color: #68e4e0;
         }
         body {
             font-family: Arial, sans-serif;
@@ -24,10 +24,10 @@
     </style>
 </head>
 <body>
-    <link rel = "stylesheet" href="styles/style-dia-da-energia.css">
+    <link rel = "stylesheet" href="styles/style-dia-dos-recursos-hidricos.css">
     <div class = "title-container">
         <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
-        <h1>Dia da Energia - SDS'25</h1>
+        <h1>Dia dos Recursos Hídricos - SDS'25</h1>
     </div>
 
     <!-- Page 1: Email Input -->
@@ -41,49 +41,47 @@
         <br>
         <button onclick="goToQuiz()">Avançar</button>
         <br>
-        <img class = "tema-dia " src = "styles/images/Dia 2.png" >
+        <img class = "tema-dia " src = "styles/images/Dia 3.png" >
     </div>
 
     <!-- Page 2: Quiz -->
     <div id="page-quiz" class="hidden">
         <div class="question">
-            <p>1. Qual das seguintes medidas é considerada a mais eficaz para melhorar a eficiência energética em prédios?</p>
-            <input type="radio" name="q1" value="Lâmpadas incandescentes"> Adoção de lâmpadas incandescentes<br>
-            <input type="radio" name="q1" value="Isolamento térmico"> Melhoria do isolamento térmico das construções<br>
-            <input type="radio" name="q1" value="Janelas sem tratamento"> Aumento do número de janelas sem tratamento térmico<br>
-            <input type="radio" name="q1" value="Redução do uso de sistemas"> Redução do uso de sistemas de climatização<br>
+            <p>1. Qual das seguintes práticas consome mais água?</p>
+            <input type="radio" name="q1" value="Café"> Produção de café<br>
+            <input type="radio" name="q1" value="Telemóveis"> Produção de telemóveis<br>
+            <input type="radio" name="q1" value="Chocolate"> Produção de chocolate<br>
+            <input type="radio" name="q1" value="algodão"> Produção de algodão<br>
             <br>
         </div>
         <div class="question">
-            <p>2. No contexto da sustentabilidade energética, o conceito de “energia limpa” busca, primordialmente: </p>
-            <input type="radio" name="q2" value="Reduzir custos"> Reduzir os custos da eletricidade para o consumidor<br>
-            <input type="radio" name="q2" value="Diminuir dependência"> Diminuir a dependência de fontes fósseis<br>
-            <input type="radio" name="q2" value="Minimizar emissão"> Minimizar a emissão de poluentes e gases de efeito estufa<br>
-            <input type="radio" name="q2" value="Aumentar capacidade"> Aumentar a capacidade de geração a qualquer custo<br>
+            <p>2. Em Portugal, qual a percentagem de bivalves de água doce que se encontra atualmente ameaçada?</p>
+            <input type="radio" name="q2" value="60%"> 60%<br>
+            <input type="radio" name="q2" value="70%"> 70%<br>
+            <input type="radio" name="q2" value="80%"> 80%<br>
+            <input type="radio" name="q2" value="90%"> 90%<br>
             <br>
         </div>
         <div class="question">
-            <p>3. Qual dos seguintes fatores pode limitar a expansão da energia eólica em áreas costeiras?</p>
-            <input type="radio" name="q3" value="Disponibilidade de ventos"> A disponibilidade de ventos constantes e fortes<br>
-            <input type="radio" name="q3" value="Impacto visual e sonoro"> O impacto visual e sonoro das turbinas eólicas em comunidades locais<br>
-            <input type="radio" name="q3" value="Baixa eficiência"> A baixa eficiência na conversão de energia eólica em eletricidade<br>
-            <input type="radio" name="q3" value="Falta de tecnologia"> A falta de tecnologia para integrar a energia eólica nas redes elétricas existentes<br>
+            <p>3. Comparativamente às plantas terrestres, as ervas marinhas:</p>
+            <input type="radio" name="q3" value="Menos"> Não são eficientes na captura de carbono<br>
+            <input type="radio" name="q3" value="Igual"> São capazes de capturar tanto carbono quanto as plantas terrestres<br>
+            <input type="radio" name="q3" value="20x mais"> Capturam 20x mais carbono que as plantas terrestres<br>
+            <input type="radio" name="q3" value="35x mais"> Capturam 35x mais carbono que as plantas terrestres<br>
             <br>
         </div>
         <div class="question">
-            <p>4. Qual dos seguintes desafios está associado à utilização de energia geotérmica em áreas urbanas densamente povoadas?</p>
-            <input type="radio" name="q4" value="Baixa disponibilidade"> A baixa disponibilidade de recursos geotérmicos em áreas urbanas<br>
-            <input type="radio" name="q4" value="Emissão de gases"> A emissão de gases de efeito estufa durante a operação de centrais geotérmicas<br>
-            <input type="radio" name="q4" value="Falta de tecnologia para adaptar"> A falta de tecnologia para adaptar a energia geotérmica às necessidades de aquecimento e resfriamento de edifícios<br>
-            <input type="radio" name="q4" value="Alto custo"> O alto custo de perfuração e instalação de sistemas geotérmicos<br>
-            <br>
+            <p>4. Qual das seguintes atividades mais consome água?</p>
+            <input type="radio" name="q4" value="Uso doméstico"> Uso doméstico<br>
+            <input type="radio" name="q4" value="Uso agrícola"> Uso agrícola<br>
+            <input type="radio" name="q4" value="Uso industrial"> Uso industrial<br>
         </div>
         <div class="question">
-            <p>5. Qual a principal diferença entre biocombustíveis de primeira geração e biocombustíveis de segunda geração?</p>
-            <input type="radio" name="q5" value="A"> Biocombustíveis de primeira geração são produzidos a partir de resíduos agrícolas, enquanto biocombustíveis de segunda geração são produzidos a partir de culturas alimentares<br>
-            <input type="radio" name="q5" value="B"> Biocombustíveis de primeira geração são mais eficientes na redução de emissões de gases de efeito estufa do que biocombustíveis de segunda geração<br>
-            <input type="radio" name="q5" value="C"> Biocombustíveis de primeira geração competem com a produção de alimentos, enquanto biocombustíveis de segunda geração utilizam matérias-primas não alimentares<br>
-            <input type="radio" name="q5" value="D"> Biocombustíveis de primeira geração são produzidos a partir de biomassa celulósica, enquanto biocombustíveis de segunda geração são produzidos a partir de óleos vegetais<br>
+            <p>5. Qual dos seguintes corpos de água sofreu um declínio catastrófico devido a práticas insustentáveis de irrigação?</p>
+            <input type="radio" name="q5" value="Lago Baikal"> Lago Baikal<br>
+            <input type="radio" name="q5" value="Mar Morto"> Mar Morto<br>
+            <input type="radio" name="q5" value="Mar de Aral"> Mar de Aral<br>
+            <input type="radio" name="q5" value="Delta do Rio Mekong"> Delta do Rio Mekong<br>
             <br>
         </div>
         <button onclick="submitQuiz()">Enviar</button>
@@ -96,11 +94,11 @@
 
     <script>
         const correctAnswers = {
-            q1: "Isolamento térmico",
-            q2: "Minimizar emissão",
-            q3: "Impacto visual e sonoro",
-            q4: "Alto custo",
-            q5: "C"
+            q1: "Café",
+            q2: "80%",
+            q3: "35x mais",
+            q4: "Uso agrícola",
+            q5: "Mar de Aral"
         };
 
         let startTime;
