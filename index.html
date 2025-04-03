@@ -9,7 +9,7 @@
     
     <style>
         .title-container{
-            background-color: #fdd544;
+            background-color: #a660d7;
         }
         body {
             font-family: Arial, sans-serif;
@@ -24,10 +24,10 @@
     </style>
 </head>
 <body>
-    <link rel = "stylesheet" href="styles/style-dia-da-economia.css">
+    <link rel = "stylesheet" href="styles/style-dia-da-tecnologia.css">
     <div class = "title-container">
         <img src = "styles/images/logo squared.png" alt = "Icon" class="title-image">
-        <h1>Dia da Economia - SDS'25</h1>
+        <h1>Dia da Investigação, Inovação e Tecnologia - SDS'25</h1>
     </div>
 
     <!-- Page 1: Email Input -->
@@ -41,48 +41,47 @@
         <br>
         <button onclick="goToQuiz()">Avançar</button>
         <br>
-        <img class = "tema-dia " src = "styles/images/Dia 4.png" >
+        <img class = "tema-dia " src = "styles/images/Dia 5.png" >
     </div>
 
     <!-- Page 2: Quiz -->
     <div id="page-quiz" class="hidden">
         <div class="question">
-            <p>1. De acordo com o EPI (Índice de Desempenho Ambiental) qual o país mais sustentável?</p>
-            <input type="radio" name="q1" value="Finlândia"> Finlândia<br>
-            <input type="radio" name="q1" value="Dinamarca"> Dinamarca<br>
-            <input type="radio" name="q1" value="Suécia"> Suécia<br>
-            <input type="radio" name="q1" value="Luxemburgo"> Luxemburgo<br>
+            <p>1. Na investigação de novas formas de energia sustentável, qual destas opções tem sido explorada para substituir os combustíveis fósseis no setor dos transportes?</p>
+            <input type="radio" name="q1" value="Carvão"> Carvão vegetal<br>
+            <input type="radio" name="q1" value="Hidrogénio"> Hidrogénio verde<br>
+            <input type="radio" name="q1" value="Petróleo"> Petróleo refinado<br>
+            <input type="radio" name="q1" value="Nuclear"> Energia nuclear portátil<br>
             <br>
         </div>
         <div class="question">
-            <p>2. O que significa ESG?</p>
-            <input type="radio" name="q2" value="Práticas"> Um conjunto de práticas que empresas adotam para reduzir custos operacionais<br>
-            <input type="radio" name="q2" value="Critério"> Um critério de avaliação (ambiental, social e governamental) que influencia decisões de investidores, podendo impactar o valor de mercado e o acesso a financiamento sustentável.<br>
-            <input type="radio" name="q2" value="Regras"> Um conjunto de regras obrigatórias impostas pelo governo para empresas reduzirem emissões de carbono.<br>
-            <input type="radio" name="q2" value="Certificação"> Uma certificação internacional que garante que uma empresa é 100% sustentável.<br>
+            <p>2. Qual é a percentagem estimada de emissões globais de gases de efeito de estufa que as tecnologia digitais podem ajudar a reduzir até 2030?</p>
+            <input type="radio" name="q2" value="5%"> 5%<br>
+            <input type="radio" name="q2" value="10%"> 10%<br>
+            <input type="radio" name="q2" value="15%"> 15%<br>
+            <input type="radio" name="q2" value="20%"> 20%<br>
             <br>
         </div>
         <div class="question">
-            <p>3. Em que ano é que a UE quer alcançar uma economia circular?</p>
-            <input type="radio" name="q3" value="2030"> 2030<br>
-            <input type="radio" name="q3" value="2027"> 2027<br>
-            <input type="radio" name="q3" value="2045"> 2045<br>
-            <input type="radio" name="q3" value="2050"> 2050<br>
+            <p>3. O que significa o termo “smart cities” no contexto da inovação e sustentabilidade?</p>
+            <input type="radio" name="q3" value="A"> Cidades que utilizam tecnologia de modo a serem mais eficientes e reduzir os impactos ambientais<br>
+            <input type="radio" name="q3" value="B"> Cidades com grande densidade tecnológica produzida de forma sustentável<br>
+            <input type="radio" name="q3" value="C"> Cidades que utilizam somente energias sustentáveis<br>
             <br>
         </div>
         <div class="question">
-            <p>4. O que significa a sigla SDG da ONU</p>
-            <input type="radio" name="q4" value="Sustainable Development Goals"> Sustainable Development Goals<br>
-            <input type="radio" name="q4" value="Sustainable Development Guidelines"> Sustainable Development Guideline<br>
-            <input type="radio" name="q4" value="Strategic Development Guidelines"> Strategic Development Guidelines<br>
-            <input type="radio" name="q4" value="Social Democratic Governance"> Social Democratic Governance<br>
+            <p>4. Qual das seguintes mudanças pode ser aplicada de modo a reduzir a pegada ecológica do setor da investigação?</p>
+            <input type="radio" name="q4" value="Adotar"> Adotar sistemas de gestão de resíduos que priorizem a incineração de materiais contaminados para garantir a biossegurança<br>
+            <input type="radio" name="q4" value="Centralizar"> Centralizar as instalações de pesquisa em grandes complexos urbanos para otimizar o uso de infraestrutura existente<br>
+            <input type="radio" name="q4" value="Implementar"> Implementar mais laboratórios verdes<br>
+            <input type="radio" name="q4" value="Padronizar"> Padronizar os protocolos experimentais para maximizar a replicabilidade dos resultados, independentemente do consumo de recursos<br>
         </div>
         <div class="question">
-            <p>5. Qual a taxa de circularidade (percentagem de recursos materiais provenientes de resíduos reciclados) de Portugal?</p>
-            <input type="radio" name="q5" value="5,0%"> 5,0%<br>
-            <input type="radio" name="q5" value="3,4%"> 3,4%<br>
-            <input type="radio" name="q5" value="6,5%"> 6,5%<br>
-            <input type="radio" name="q5" value="2,6%"> 2,6%<br>
+            <p>5. Qual destas inovações mais contribui para a economia circular, reduzindo o desperdício de materiais?</p>
+            <input type="radio" name="q5" value="Produção linear"> Produção linear<br>
+            <input type="radio" name="q5" value="Impressão 3D"> Impressão 3D com materiais recicláveis<br>
+            <input type="radio" name="q5" value="Plástico descartável"> Utilização única de plástico descartável<br>
+            <input type="radio" name="q5" value="Depósitos de resíduos"> Depósitos de resíduos sem triagem<br>
             <br>
         </div>
         <button onclick="submitQuiz()">Enviar</button>
@@ -95,11 +94,11 @@
 
     <script>
         const correctAnswers = {
-            q1: "Dinamarca",
-            q2: "Critério",
-            q3: "2050",
-            q4: "Sustainable Development Goals",
-            q5: "2,6%"
+            q1: "Hidrogénio",
+            q2: "15%",
+            q3: "A",
+            q4: "Implementar",
+            q5: "Impressão 3D"
         };
 
         let startTime;
